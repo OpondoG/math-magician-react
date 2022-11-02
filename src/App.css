@@ -12,14 +12,25 @@ body {
 .calContainer {
   display: grid;
   place-items: center;
+  margin-top: 2em;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.flex-container .cal-title {
+  margin: 1.2em 0 0 3.5em;
 }
 
 .calculator-grid {
   display: grid;
   margin: 2em 0;
-  left: 25%;
-  right: 20%;
-  top: 10%;
+  left: 20%;
+  right: 15%;
+  top: 5%;
   grid-template-columns: repeat(8, 6rem);
 }
 
@@ -35,15 +46,15 @@ body {
 
 .output {
   grid-column: 1 / -1;
-  background-color: #858694;
-  height: 10vh;
+  background-color: black;
+  height: 12vh;
   text-align: center;
   margin-top: 0;
 }
 
 .btn {
   height: 5rem;
-  font-size: 20px;
+  font-size: 18px;
   text-align: center;
   grid-column: span 2;
 }
@@ -51,18 +62,18 @@ body {
 .btn:hover {
   color: black;
   outline: 0.05em solid grey;
-  z-index: 3;
+  z-index: 2;
 }
 
 .btn:active {
   color: gold;
   outline: 0.05em solid #f5913e;
-  z-index: 3;
+  z-index: 2;
 }
 
 .function-btn {
   height: 5rem;
-  font-size: 20px;
+  font-size: 15px;
   text-align: center;
   background-color: #f5913e;
   grid-column: span 2;
@@ -81,4 +92,90 @@ body {
   font-size: 30px;
   font-family: 'Times New Roman', Times, serif;
   padding: 10px;
+}
+
+ul li {
+  list-style: none;
+  color: #f5913e;
+}
+
+a {
+  text-decoration: none;
+}
+
+.nav-menu {
+  padding-right: 1.5em;
+  position: relative;
+  color: #f5913e;
+}
+
+.nav-items {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 500px;
+  font-family: 'Lato', sans-serif;
+  color: #f5913e;
+}
+
+.line {
+  font-size: 15px;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Lato', sans-serif;
+  margin-top: 2em;
+  background-color: #f5913e;
+}
+
+.title {
+  margin-left: 5em;
+}
+
+.home-container {
+  max-width: 80%;
+  margin: 2em 9.7em;
+}
+
+.home-title {
+  margin-bottom: 2em;
+}
+
+.home-text {
+  margin-top: 1em;
+  font-size: 18px;
+}
+
+.quote {
+  margin-top: 5em;
+  text-align: center;
+  font-size: 18px;
+}
+
+/* CSS for big screens */
+@media (max-width: 800px) {
+  .flex-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .flex-container .cal-title {
+    margin-bottom: 2em;
+  }
+
+  .calculator-grid {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .cal-frame {
+    margin-left: 4em;
+    margin-bottom: 2em;
+  }
 }
